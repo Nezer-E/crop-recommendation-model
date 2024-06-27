@@ -76,17 +76,9 @@ def inputprocessor():
 
         X_train = scaler.fit_transform(X_train)
         test_data = scaler.transform(test_data)
-
-        params = {
-            'learning_rate':[0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50],
-            'max_depth': [1,2,3,4,5,6,7,8.9,10],
-            'n_estimators': [10,20,30,40,50,60,70,80,90,100],
-            'subsample': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-            'colsample_bytree': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-        }
-
+        
         #accuracy score = 99.3%
-        classifier = XGBClassifier(learning_rate = 0.25, max_depth = 7, n_estimators = 60, subsample = 0.9, colsample_bytree = 0.3, )
+        classifier = XGBClassifier(learning_rate = 0.25, max_depth = 7, n_estimators = 60, subsample = 0.9, colsample_bytree = 0.3)
         
         
         classifier.fit(X_train, Y_train)
