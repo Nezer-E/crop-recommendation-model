@@ -35,30 +35,9 @@ def inputprocessor():
     st.write(test_data)
     st.subheader("Results will appear in this section")
 
-    train_data = pd.read_csv("Croprecommendation.csv")
+    train_data = pd.read_csv("modifiedcroptrain.csv")
         
-    train_data = train_data.replace('rice', 0)
-    train_data = train_data.replace('maize', 1)
-    train_data = train_data.replace('chickpea', 2)
-    train_data = train_data.replace('kidneybeans', 3)
-    train_data = train_data.replace('pigeonpeas', 4)
-    train_data = train_data.replace('mothbeans', 5)
-    train_data = train_data.replace('mungbean', 6)
-    train_data = train_data.replace('blackgram', 7)
-    train_data = train_data.replace('lentil', 8)
-    train_data = train_data.replace('pomegranate', 9)
-    train_data = train_data.replace('banana', 10)
-    train_data = train_data.replace('mango', 11)
-    train_data = train_data.replace('grapes', 12)
-    train_data = train_data.replace('watermelon', 13)
-    train_data = train_data.replace('muskmelon', 14)
-    train_data = train_data.replace('apple', 15)
-    train_data = train_data.replace('orange', 16)
-    train_data = train_data.replace('papaya', 17)
-    train_data = train_data.replace('coconut', 18)
-    train_data = train_data.replace('cotton', 19)
-    train_data = train_data.replace('jute', 20)
-    train_data = train_data.replace('coffee', 21)
+   
 
     X_train = train_data.drop('label', axis =1)
     Y_train = pd.DataFrame({
